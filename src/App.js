@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import OpinionCard from "./components/OpinionCard";
+import Post from "./components/Post";
 import { useState } from "react";
 
 function App() {
@@ -32,51 +33,48 @@ function App() {
   return (
     <div className="App">
       <div className="Main-Wrapper">
-        <div className="Main-Post">
-            <div>
-              <p className="Post-Title">Hello Title</p>
-            </div>
-            <div className="Content-Wrapper">
-              <p>Hello content</p>
-            </div>
-        </div>
-        <form className="Form-Wrapper">
-          <label className="Title-Contanier">
-            <span>Title</span>
-            <input
-              className="Title-Input"
-              name="title"
-              placeholder="My Opinion Title"
-              onChange={handleOnChange}
-            />
-          </label>
 
-          <label className="Desc-Contanier">
-            <span>Description</span>
-            <textarea
-              name="description"
-              placeholder="What do you think?" 
-              onChange={handleOnChange}
-              className="Desc-Input"
-            />
-          </label>
+        <Post count={cards.length}/>
 
-          <button className="Add-Button" onClick={onSubmit}>
-            Add
-          </button>
-        </form>
-
-        <div>
-          {cards.map((card, index) => {
-            return (
-              <OpinionCard
-                title={card.title}
-                description={card.description}
-                onDelete={() => handleOnDelete(index)}
+        <div className="Comment-Section">
+          <form className="Form-Wrapper">
+            <p>What do you think?</p>
+            <label className="Title-Contanier">
+              <input
+                className="Title-Input"
+                name="title"
+                placeholder="Your name"
+                onChange={handleOnChange}
               />
-            );
-          })}
+            </label>
+
+            <label className="Desc-Contanier">
+              <textarea
+                name="description"
+                placeholder="I think that..." 
+                onChange={handleOnChange}
+                className="Desc-Input"
+              />
+            </label>
+
+            <button className="Add-Button" onClick={onSubmit}>
+              Add
+            </button>
+          </form>
+
+          <div>
+            {cards.map((card, index) => {
+              return (
+                <OpinionCard
+                  title={card.title}
+                  description={card.description}
+                  onDelete={() => handleOnDelete(index)}
+                />
+              );
+            })}
+          </div>
         </div>
+        
       </div>
     </div>
   );
