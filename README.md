@@ -1,71 +1,36 @@
-# Getting Started with Create React App
+# Día 2: Frontend con React
+Bienvenido al repositorio del mini-proyecto que se realizará en el taller de Frontend con React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ¿De qué va el proyecto?
+Se trata de un ejemplo de interfaz sencilla hecha con React.
+Utilizarás JavaScript, JSX (un híbrido de Javascript y HTML) y un poco de CSS.
+El nombre de la app es **Change My Mind**.
+La idea es una aplicación donde se lee una publicación controversial. El usuario puede publicar sus comentarios,
+argumentando por qué sí o por qué no está de acuerdo con la publicación inicial.
 
-## Available Scripts
+### En este taller, aprenderás:
+- ¿Qué es React?
+- Inicialización de un proyecto de React.
+- Básicos de una interfaz con React.
+- Creación de componentes en React.  
+- Manejo del estado con useState.  
+- Mostrar información del estado a la pantalla.  
+- Publicar y borrar información / comentarios.  
 
-In the project directory, you can run:
+## Cómo usar el Repo
+Existen dos branches: `main` y `begin`.   
+En `main`, encontrarás el código del proyecto como quedará al final del curso. Si gustas, puedes descargarlo o clonarlo desde la terminal usando Git, y construir sobre él o modificar todo lo que quieras.  
+En `begin`, encontrarás una versión del proyecto inicial, antes de haber desarrollado cualquier cosa. Puedes descargar o clonar esta branch al inicio del curso para programar a manera de _follow allong_, o puedes crear un proyecto de React desde cero por tu cuenta. (Esto se hace con el commando `npx create-react-app nombreapp`).  
 
+## Comándos útiles
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Corre la app en modo de desarrollo (localmente).\
+Abre [http://localhost:3000](http://localhost:3000) para visualizar tu proyecto en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La página se recarga automáticamente si haces cambios en el código.\
+También podrás ver errores (si los hay) en la consola del navegador. Abre la consola de tu navegador con `Ctrl` + `Shift` + `C`.
 
-### `npm test`
+Para detener el servidor de desarrollo, en la terminal presiona `Ctrl` + `C`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # cursoReact
