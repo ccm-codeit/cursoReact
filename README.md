@@ -6,7 +6,7 @@ Se trata de un ejemplo de interfaz sencilla hecha con React.
 Utilizarás JavaScript, JSX (un híbrido de Javascript y HTML) y un poco de CSS.
 El nombre de la app es **Change My Mind**.
 La idea es una aplicación donde se lee una publicación controversial. El usuario puede publicar sus comentarios,
-argumentando por qué sí o por qué no está de acuerdo con la publicación inicial.
+argumentando por qué sí o por qué no está de acuerdo con la publicación inicial. La publicación incluye un contador de comentarios que se actualiza dinámicamente.
 
 ### En este taller, aprenderás:
 - ¿Qué es React?
