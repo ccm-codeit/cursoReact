@@ -2,7 +2,8 @@ import React from 'react'
 import '../styles/App.css'
 
 export default function Post(props) {
-    const count = props.count;
+
+    //
     return (
         <div className="Post-Section">
             <div>
@@ -21,7 +22,7 @@ export default function Post(props) {
                 </p>
                 </div>
                 <div className="Count-Wrapper">
-                    <p>Comments: {count}</p>
+                    <p>Comments: 0</p>
                 </div>
             </div>
         </div>
