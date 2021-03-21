@@ -29,7 +29,7 @@ function App() {
   const onSubmit = (e) => {
     // agrega una nueva card a la lista de cards
     e.preventDefault(); // evita que recargue la página
-    setCards((cards) => [...cards, card]);
+    setCards((cards) => [card, ...cards]);
     console.log(cards);
   };
 
@@ -40,7 +40,7 @@ function App() {
 
         <div className="Comment-Section">
           <form className="Form-Wrapper">
-            <p>What do you think?</p>
+            <p className="Form-Title">What do you think?</p>
             <label className="Title-Contanier">
               <input
                 className="Title-Input"
@@ -60,7 +60,7 @@ function App() {
             </label>
 
             <button className="Add-Button" onClick={onSubmit}>
-              Add
+              Post
             </button>
           </form>
 

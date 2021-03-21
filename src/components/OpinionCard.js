@@ -6,7 +6,7 @@ function OpinionCard(props) {
     <div className="Card-Wrapper">
       <p className="Card-Title">{props.title}</p>
       <p className="Card-Description">{props.description}</p>
-      <button className="Card-Delete" onClick={props.onDelete}>
+      <button className="Delete-Button" onClick={props.onDelete}>
         Delete
       </button>
     </div>
