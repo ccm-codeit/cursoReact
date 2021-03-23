@@ -26,11 +26,19 @@ function App() {
     });
   };
 
+  const cleanInputs = () => {
+    console.log("Setting card");
+    setCard({
+      title: "",
+      description: "",
+    })
+  }
+
   const onSubmit = (e) => {
     // agrega una nueva card a la lista de cards
     e.preventDefault(); // evita que recargue la página
     setCards((cards) => [card, ...cards]);
-    console.log(cards);
+    cleanInputs();
   };
 
   return (
@@ -47,6 +55,7 @@ function App() {
                 name="title"
                 placeholder="Your name"
                 onChange={handleOnChange}
+                value={card.title}
               />
             </label>
 
@@ -56,6 +65,7 @@ function App() {
                 placeholder="I think that..."
                 onChange={handleOnChange}
                 className="Desc-Input"
+                value={card.description}
               />
             </label>
 
@@ -68,6 +78,7 @@ function App() {
             {cards.map((card, index) => {
               return (
                 <OpinionCard
+                  key={index}
                   title={card.title}
                   description={card.description}
                   onDelete={() => handleOnDelete(index)}
