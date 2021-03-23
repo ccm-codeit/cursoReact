@@ -20,9 +20,14 @@ argumentando por qué sí o por qué no está de acuerdo con la publicación ini
 ## Cómo usar el Repo
 Existen dos branches: `main` y `begin`.   
 En `main`, encontrarás el código del proyecto como quedará al final del curso. Si gustas, puedes descargarlo o clonarlo desde la terminal usando Git, y construir sobre él o modificar todo lo que quieras.  
-En `begin`, encontrarás una versión del proyecto inicial, antes de haber desarrollado cualquier cosa. Puedes descargar o clonar esta branch al inicio del curso para programar a manera de _follow allong_, o puedes crear un proyecto de React desde cero por tu cuenta. (Esto se hace con el commando `npx create-react-app nombreapp`).  
+En `begin`, encontrarás una versión del proyecto inicial, antes de haber desarrollado cualquier cosa. Puedes descargar o clonar esta branch al inicio del curso para programar a manera de _follow allong_, o puedes crear un proyecto de React desde cero por tu cuenta. (Esto se hace con el commando `npx create-react-app nombreapp`, más detalle abajo).  
 
 ## Comándos útiles
+### ``npx create-react-app nombreapp`
+Crea un proyecto de React desde cero. Se generan todos los archivos necesarios y se descargan los paquetes necesarios.
+Corre este comando en un folder dedicado para tu proyecto si quieres empezar un proyecto desde cero por tu cuenta.
+Debes de tener installado `npm`, el cual viene incluido en la instalación de [Node.js](https://nodejs.org/en/download/).
+
 ### `npm start`
 
 Corre la app en modo de desarrollo (localmente).\
