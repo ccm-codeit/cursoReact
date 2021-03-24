@@ -21,9 +21,8 @@ function App() {
   };
 
   const handleOnDelete = (index) => {
-    cards.filter(() => {
-      return setCards(cards.filter((card, i) => i !== index));
-    });
+    const newCards = cards.filter((comment, i) => i !== index);
+    setCards(newCards);
   };
 
   const cleanInputs = () => {
