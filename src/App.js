@@ -2,42 +2,54 @@ import "./styles/App.css";
 import OpinionCard from "./components/OpinionCard";
 import Post from "./components/Post";
 import { useState } from "react";
-//Test
+
 function App() {
-  const [card, setCard] = useState({
-    // la información de los inputs
-    title: "",
-    description: "",
-  });
+  
+  // Elementos del Estado
+  const [name, setName] = useState("");
+  const [text, setText] = useState("");
 
-  const [cards, setCards] = useState([]); // lista de nuestras 'Opinion Cards'
+  // Funciones que gestionan el Estado
+  const [cards, setCards] = useState([]); 
 
-  const handleOnChange = (e) => {
-    // manejador de cambios en input
-    setCard({
-      ...card,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const handleName = (e) => {
+    let newName = e.target.value;
+    console.log(newName);
+    setName(newName);
+  }
+
+  const handleText = (e) => {
+    let newText = e.target.value;
+    console.log(newText);
+    setText(newText);
+  }
 
   const handleOnDelete = (index) => {
-    const newCards = cards.filter((comment, i) => i !== index);
+    console.log("Deleting comment", index);
+    let newCards = cards.filter((card, card_index) => card_index !== index);
     setCards(newCards);
   };
 
-  const cleanInputs = () => {
-    console.log("Setting card");
-    setCard({
-      title: "",
-      description: "",
-    })
+  const eraseName = () => {
+    setName("");
+  }
+
+  const eraseText = () => {
+    setText("");
   }
 
   const onSubmit = (e) => {
-    // agrega una nueva card a la lista de cards
-    e.preventDefault(); // evita que recargue la página
-    setCards((cards) => [card, ...cards]);
-    cleanInputs();
+    e.preventDefault();   // evita que la página se recargue si se usó <form> para contener los input
+    const card = {
+      name,
+      text,
+    }
+    console.log("New card:", name, text);
+    const newCards = [card, ...cards];
+    console.log("New cardss:\n", newCards);
+    setCards(newCards);
+    eraseName();
+    eraseText();
   };
 
   return (
@@ -51,20 +63,18 @@ function App() {
             <label className="Title-Contanier">
               <input
                 className="Title-Input"
-                name="title"
                 placeholder="Your name"
-                onChange={handleOnChange}
-                value={card.title}
+                onChange={handleName}
+                value={name}
               />
             </label>
 
             <label className="Desc-Contanier">
               <textarea
-                name="description"
                 placeholder="I think that..."
-                onChange={handleOnChange}
+                onChange={handleText}
                 className="Desc-Input"
-                value={card.description}
+                value={text}
               />
             </label>
 
@@ -78,8 +88,8 @@ function App() {
               return (
                 <OpinionCard
                   key={index}
-                  title={card.title}
-                  description={card.description}
+                  title={card.name}
+                  description={card.text}
                   onDelete={() => handleOnDelete(index)}
                 />
               );
