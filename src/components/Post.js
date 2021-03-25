@@ -1,9 +1,8 @@
 import React from 'react'
 import '../styles/App.css'
 
-export default function Post() {
+function Post() {
 
-    //
     return (
         <div className="Post-Section">
             <div>
@@ -28,3 +27,5 @@ export default function Post() {
         </div>
     )
 }
+
+export default Post;
